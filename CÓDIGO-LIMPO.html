@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PÁGINA</title>
+
+   <!--AQUI CHAMA A PASTA DAS CSS-->
+<link rel="stylesheet" href="style.css">
+
+
+
+
+  <!--AQUI CHAMA A PASTA SCRIPT.JS-->
+<script src="script.js" defer></script>
+
+
+
+<!--BUSCADOR DE FONTES EXTERNAS-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://gstatic.com" crossorigin>
+<link href="https://googleapis.com" rel="stylesheet">
+
+
+
+
+
+
+</head><!--CABEÇA-->
+
+<body><!--CORPO-->
+
+
+
+        <!--TAG COM OS BOTÔES-->
+ <nav class="nav-container">
+  <div class="nav-pills">
+
+
+    <a href="#" class="pill-item active" onclick="document.getElementById('COLOCAR ID').scrollIntoView({ behavior: 'smooth' }); return false;">INICIO</a>
+
+<a href="botaoMusica" class="pill-item" onclick="document.getElementById('botaoMusica').scrollIntoView({ behavior: 'smooth' }); return false;">MÚSICAS</a>
+
+<a href="#fim-da-pagina" class="pill-item" onclick="document.getElementById('fotos-da-pagina').scrollIntoView({ behavior: 'smooth' }); return false;">FOTOS</a>
+
+<a href="video-hinos" class="pill-item" onclick="document.getElementById('video-hinos').scrollIntoView({ behavior: 'smooth' }); return false;">VIDEOS</a>
+
+
+
+
+
+
+    
+  </div>
+</nav>
+    <!--FECHAMENTO DO CÓDIGO-->
+
+
+
+   <div class="pill-nav" aria-label="Atalhos da página">
+
+        
+
+
+        
+        
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1>MÚSICA DO RAPPA!</h1>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-91stNl57xt31dZhq-58vSraPN3DDdc1U9ZCpbUb9lg&s=10" alt="rappa" width="100%">
+<br>
+
+
+<button id="botaoMusica" loop>
+        ▶ SÚPLICA CEARENCE
+    </button>
+
+    <audio id="musica" src="musicas-do-site/suplica-cearense.mpeg"></audio>
+
+
+<img src="imagens-site.png/vinil-capa-rappa.jpg" alt="vinil" width="100%">
+
+<br>
+<br>
+
+
+
+
+<h3 id="fotos-da-pagina">FOTOS DE GATOS</h3>
+
+
+<img src="imagens-site.png/foto-gato-amarelo.jpg" alt="gtao-amarelo" width="100%">
+
+<img src="imagens-site.png/foto-gato-filhote.jpg" alt="gtao-amarelo" width="100%">
+
+<img src="imagens-site.png/gato-macho-foto.jpg" width="100%">
+
+
+<main class="videos">
+<h3 class="titulo-video">Fernandinho</h3>
+
+
+
+<div class="wrapper-video">
+
+  <video src="video-interno/fiqueira-hino-video.mp4" controls loop id="video-hinos" width="100%"></video>
+
+  </video>
+</div>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>
