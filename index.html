@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+  <meta name="site bom.">
+
+
+
+
+
+
+
+  <title>site-html-5</title>
+
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Nuvem, início">
+      <span class="brand-mark" aria-hidden="true">v</span>
+      <span>VITOR<span class="brand-dot">.</span></span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Navegação principal">
+      <a href="#planos">NOVO</a>
+      <a href="#recursos">SEMI-NOVO</a>
+      <a href="#desempenho">USADO-BOM</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="button button-dark header-cta" href="#planos">CLIQUE AQUI</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Menu para celular">
+    <a href="#planos">NOVO</a>
+    <a href="#recursos">USADO-BOM</a>
+    <a href="#desempenho">SEMI-NOVO</a>
+    <a href="#planos">CLIQUE AQUI</a>
+  </nav>
+
+  <main>
+    <section class="hero section-wrap" id="inicio">
+      <div class="pill-nav" aria-label="Atalhos da página">
+        <a class="pill active" href="#planos">Musica</a>
+        <a class="pill" href="#recursos">Imagens</a>
+        <a class="pill" href="#recursos">Gta-SA</a>
+        <a class="pill-arrow" href="#planos" aria-label="Ir para os planos">›</a>
+      </div>
+
+      <div class="hero-content">
+        <span class="eyebrow"><span class="eyebrow-dot"></span>Projeto bonito</span>
+        <h1>Seja-Bem-Vindo <span>Simone.</span></h1>
+        <p class="hero-copy">Site 100%.</p>
+        <div class="hero-actions">
+          <a class="button button-gradient" href="#planos">CLIQUE <span aria-hidden="true"></span></a>
+          
+        </div>
+       
+
+     
+        
+         
+           
+         
+  
+        
+    
+      
+    
+
+    
+        <h2>Escolha o ideal para você</h2>
+       
+        
+      
+
+      
+         
+         
+        
+
+        
+
+        
+      </div>
+     
+    </section>
+
+   
+
+    <section class="contact section-wrap" id="contato">
+      <div><span class="eyebrow">BOA ESCOLHA</span><h2>COLOQUE-gmail</h2><p>Escolha O QUE TE GUSTA</p></div>
+      <form id="contactForm" class="contact-form">
+        <label for="email">Seu e-mail</label>
+        <div class="email-row"><input type="email" id="email" placeholder="voce@exemplo.com" required><button class="button button-dark" type="submit">ENVIAR</button></div>
+        
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#inicio"><span class="brand-mark">V</span><span>Vitor<span class="brand-dot">.</span></span></a><a href="#inicio">VOLTAR PRA INICIO ↑</a></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+
+
+
+
+
+  
+</body>
+</html>
