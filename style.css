@@ -28,10 +28,21 @@ h1 {
 
 
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove espaços indesejados abaixo da imagem */
+}
 
 
 
 
+.container {
+    width: 100%;
+    max-width: 1200px; /* Limita no PC, mas encolhe no celular */
+    padding: 0 15px; /* Evita que o conteúdo cole nas bordas do celular */
+    box-sizing: border-box;
+}
 
 
 
