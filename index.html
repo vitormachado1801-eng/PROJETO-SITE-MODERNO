@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+  <meta name="site bom.">
+
+
+
+
+
+
+
+  <title>site-html-5</title>
+
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+
+
+  
+  <header class="site-header">
+
+
+    <a class="brand" href="#inicio" aria-label="Nuvem, início">
+      <span class="brand-mark" aria-hidden="true">v</span>
+      <span>VITOR<span class="brand-dot">.</span></span>
+    </a>
+
+
+
+
+
+
+    <nav class="desktop-nav" aria-label="Navegação principal">
+      <a href="#">FOTO-GATOS</a>
+      <a href="#">SEMI-NOVO</a>
+      <a href="#">USADO-BOM</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="button button-dark header-cta" href="#planos">CLIQUE AQUI</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Menu para celular">
+    <a href="#musica">FOTOS-GATOS</a>
+    <a href="#">JOGOS</a>
+    <a href="#">VIDEOS</a>
+    <a href="#">PAGINA-02</a>
+  </nav>
+
+
+          <!--BOTOES MUSICA IMAGENS  GTA SA-->
+<div class="pill-nav" aria-label="Atalhos da página">
+
+
+        
+        <a class="pill" href="#musica">MÚSICA</a>
+
+        <a class="pill"  href="#musica">IMAGENS</a>
+
+
+        <a class="pill" href="gta-san-andreas.zip" download>GTA-SA</a>
+
+
+        <a class="pill-arrow" href="#" aria-label="Ir para os planos">›</a>
+      </div>
+
+
+
+
+
+<!-- Estilização do Botão (Cole dentro da tag <head> ou no início do body) -->
+<style>
+    /* Estilo Base do Botão de Música */
+    .btn-musica-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    .btn-musica {
+        background: linear-gradient(135deg, #2b2e4a, #e84545); /* Gradiente moderno */
+        color: #ffffff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 50px; /* Bordas arredondadas elegantes */
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(232, 69, 69, 0.4); /* Sombra suave */
+        transition: all 0.3s ease; /* Transição para efeitos */
+        outline: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Efeito ao passar o mouse (Hover) */
+    .btn-musica:hover {
+        transform: translateY(-3px); /* Levanta levemente o botão */
+        box-shadow: 0 6px 20px rgba(232, 69, 69, 0.6); /* Intensifica a sombra */
+        background: linear-gradient(135deg, #3f446e, #ff5252); /* Muda o tom do gradiente */
+    }
+
+    /* Efeito ao clicar (Active) */
+    .btn-musica:active {
+        transform: translateY(1px); /* Abaixa ao clique simulando um botão físico */
+    }
+</style>
+
+<!-- Estrutura HTML -->
+<audio id="minhaMusica">
+    <source src="rodo-cotidiano.mpeg" type="audio/mpeg">
+    Seu navegador não suporta o elemento de áudio.
+</audio>
+
+<div class="btn-musica-container">
+    <button onclick="controlarMusica()" id="btnMusica" class="btn-musica">
+        <span id="iconeBtn">▶</span> 
+        <span id="textoBtn">TOCAR MÚSICA</span>
+    </button>
+</div>
+
+<!-- Lógica JavaScript Atualizada -->
+<script>
+    const musica = document.getElementById('minhaMusica');
+    const icone = document.getElementById('iconeBtn');
+    const texto = document.getElementById('textoBtn');
+
+    function controlarMusica() {
+        if (musica.paused) {
+            musica.play();
+            icone.innerHTML = "⏸";
+            texto.innerHTML = "PAUSAR";
+        } else {
+            musica.pause();
+            icone.innerHTML = "▶";
+            texto.innerHTML = "TOCAR MÚSICA";
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <main>
+    <section class="hero section-wrap" id="inicio">
+
+
+
+
+
+      
+
+      
+       
+
+     
+        
+         
+           
+         
+  
+        
+    
+      
+    
+
+    
+       
+       
+        
+      
+
+      
+         
+         
+        
+
+        
+
+        
+      </div>
+     
+    </section>
+
+   
+
+    
+  </main>
+
+  
+
+  <script src="script.js"></script>
+
+
+
+
+
+
+
+
+<!--<script>document.getElementById('btn-musica').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita que a página recarregue ou dê erro no '#'
+    
+    const alvo = document.getElementById('secao-musica');
+    if (alvo) {
+        alvo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+});</script>-->
+
+
+
+
+        
+      </form>
+    </section>
+  </main>
+
+
+
+
+
+
+  
+
+</section>
+
+   
+
+ 
+
+
+
+
+
+
+
+
+
+<footer class="site-footer"><a class="brand footer-brand" href="#inicio"><span class="brand-mark">V</span><span>Vitor<span class="brand-dot">.</span></span></a><a href="#inicio">VOLTAR PRA INICIO ↑</a></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+
+
+
+
+
+<div class="hero-content">
+        <span class="eyebrow"><span class="eyebrow-dot"></span>SITE ON</span>
+       </div>
+       <br>
+</body>
+</html>
