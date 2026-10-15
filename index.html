@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#171329">
+  <title>VITOR | Controle Financeiro</title>
+  <link rel="stylesheet" href="style-2026.css.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark">V</span><div><strong>VITOR</strong><small>CONTROLE FINANCEIRO</small></div></div>
+    <nav>
+      <a class="nav-link active" href="#painel">▦ <span>Painel</span></a>
+      <a class="nav-link" href="#movimentacoes">↕ <span>Movimentações</span></a>
+      <a class="nav-link" href="#relatorios">▥ <span>Relatórios</span></a>
+    </nav>
+    <div class="sidebar-note"><span class="dot"></span> Seus dados ficam neste navegador</div>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div><p class="eyebrow">VISÃO GERAL</p><h1>Controle financeiro</h1><p class="subheading">Organize suas receitas, despesas e objetivos.</p></div>
+      <button class="primary-button" id="novoLancamentoTopo">＋ Novo lançamento</button>
+    </header>
+
+    <section id="painel" class="section">
+      <div class="section-heading"><div><h2>Resumo do mês</h2><p>Acompanhe sua situação financeira.</p></div>
+        <label class="month-picker">Mês <input type="month" id="mesFiltro"></label>
+      </div>
+      <div class="summary-grid">
+        <article class="summary-card balance-card"><div class="card-top"><span>Saldo do mês</span><span class="card-icon">↗</span></div><strong id="saldoTotal">R$ 0,00</strong><small id="saldoLegenda">Receitas menos despesas</small></article>
+        <article class="summary-card"><div class="card-top"><span>Receitas</span><span class="card-icon green">＋</span></div><strong class="positive" id="receitasTotal">R$ 0,00</strong><small>Dinheiro que entrou</small></article>
+        <article class="summary-card"><div class="card-top"><span>Despesas</span><span class="card-icon red">−</span></div><strong class="negative" id="despesasTotal">R$ 0,00</strong><small>Dinheiro que saiu</small></article>
+        <article class="summary-card"><div class="card-top"><span>Movimentações</span><span class="card-icon purple">≋</span></div><strong id="qtdTotal">0</strong><small>Lançamentos neste mês</small></article>
+      </div>
+      <div class="dashboard-grid" id="relatorios">
+        <article class="panel"><div class="panel-heading"><div><h2>Despesas por categoria</h2><p>Distribuição dos gastos do mês selecionado.</p></div></div><div id="graficoCategorias" class="category-chart"><p class="empty-state">Ainda não há despesas neste mês.</p></div></article>
+        <article class="panel"><div class="panel-heading"><div><h2>Visão do orçamento</h2><p>Como as receitas foram distribuídas.</p></div></div><div class="budget-wrap"><div class="budget-ring" id="budgetRing"><div><strong id="percentualGasto">0%</strong><small>da receita gasta</small></div></div><div class="budget-legend"><div><span class="legend-dot income-dot"></span><span>Receitas</span><strong id="legReceitas">R$ 0,00</strong></div><div><span class="legend-dot expense-dot"></span><span>Despesas</span><strong id="legDespesas">R$ 0,00</strong></div><div><span class="legend-dot balance-dot"></span><span>Saldo</span><strong id="legSaldo">R$ 0,00</strong></div></div></div></article>
+      </div>
+    </section>
+
+    <section id="movimentacoes" class="section transactions-section">
+      <div class="section-heading"><div><h2>Movimentações</h2><p>Consulte, filtre e gerencie seus lançamentos.</p></div><button class="primary-button" id="novoLancamento">＋ Adicionar</button></div>
+      <div class="filters">
+        <label class="search-box">⌕ <input id="busca" type="search" placeholder="Buscar descrição..."></label>
+        <select id="tipoFiltro" aria-label="Filtrar por tipo"><option value="todos">Todos os tipos</option><option value="receita">Receitas</option><option value="despesa">Despesas</option></select>
+        <select id="categoriaFiltro" aria-label="Filtrar por categoria"><option value="todas">Todas as categorias</option></select>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th>Descrição</th><th>Categoria</th><th>Data</th><th>Tipo</th><th class="align-right">Valor</th><th></th></tr></thead><tbody id="listaLancamentos"></tbody></table>
+      <div id="semLancamentos" class="empty-state">Nenhum lançamento encontrado. Adicione sua primeira receita ou despesa.</div></div>
+      <div class="table-footer"><span id="contadorLancamentos">0 lançamentos</span><button class="text-button" id="exportarCsv">Exportar CSV</button></div>
+    </section>
+    <footer>VITOR • Controle financeiro pessoal <span>Salvo localmente no seu navegador</span></footer>
+  </main>
+
+  <dialog id="modalLancamento">
+    <form id="formLancamento">
+      <div class="modal-heading"><div><p class="eyebrow">NOVO REGISTRO</p><h2 id="tituloModal">Adicionar lançamento</h2></div><button type="button" class="close-button" id="fecharModal" aria-label="Fechar">×</button></div>
+      <div class="type-toggle"><label><input type="radio" name="tipo" value="receita" checked><span>＋ Receita</span></label><label><input type="radio" name="tipo" value="despesa"><span>− Despesa</span></label></div>
+      <label class="field">Descrição<input id="descricao" name="descricao" required maxlength="90" placeholder="Ex.: salário, mercado, internet"></label>
+      <div class="form-row"><label class="field">Valor (R$)<input id="valor" name="valor" type="number" min="0.01" step="0.01" required placeholder="0,00"></label><label class="field">Data<input id="data" name="data" type="date" required></label></div>
+      <label class="field">Categoria<select id="categoria" name="categoria" required></select></label>
+      <label class="field">Observações (opcional)<textarea id="observacoes" name="observacoes" rows="2" maxlength="250" placeholder="Detalhes sobre este lançamento"></textarea></label>
+      <div class="modal-actions"><button type="button" class="secondary-button" id="cancelarModal">Cancelar</button><button class="primary-button" type="submit">Salvar lançamento</button></div>
+    </form>
+  </dialog>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="script-2026.js"></script>
+</body>
+</html>
